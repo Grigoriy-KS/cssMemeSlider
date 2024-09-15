@@ -21,3 +21,7 @@ body {
     height: 43.5vw;
 	margin: 2vw auto 0;
 }
+
+.wrapper > input {
+	display: none;
+}
