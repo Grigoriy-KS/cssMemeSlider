@@ -232,3 +232,19 @@ body {
 	-o-transform: scale(1);
 	transform: scale(1);
 }
+
+@media (max-width: 500px) {
+
+    .wrapper .controls {
+        /* Позиционирование */
+        position: relative;
+        right: 0;
+        left: 0;
+
+        /* Блочная модель */
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+}
