@@ -64,3 +64,24 @@ body {
 	-o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
 	transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;    
 }
+
+.slide1 {
+    background-image: url(./assets/img/eb4fe9d0be35de4394b9755566c9f86c.jpg);
+    background-size: cover;    
+}
+.slide2 {
+    background-image: url(./assets/img/314e15b1818ee8a6f654168f611e9cba.jpg);
+    background-size: cover;
+}
+.slide3 {
+    background-image: url(./assets/img/c55b9821089e04e5860f5354bb5d9929.jpg);
+    background-size: cover;
+}
+.slide4 {
+    background-image: url(./assets/img/65303dfe5c6932f5fe048ddde7cbc98f.jpg);
+    background-size: cover;
+}
+.slide5 {
+    background-image: url(./assets/img/0a00eef50c28de8196e15e3c58c8ded5.jpg);
+    background-size: cover;
+}
