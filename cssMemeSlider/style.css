@@ -120,7 +120,7 @@ body {
     /* Блочная модель */
 	display: inline-block;
 	width: 18px;
-	height: 18px;
+	height: 30px;
 
     /* Оформление */
 	cursor: pointer;
