@@ -87,17 +87,27 @@ body {
 }
 
 .wrapper .controls {
+    /* Позиционирование */
     right: 0.6vw;
 	position: absolute;
+
+    /* Блочная модель */
     margin-top: 3.3vw;
 }
 
 .wrapper label {
-	cursor: pointer;
-	display: inline-block;
-	height: 18px;
+    /* Позиционирование */
 	position: relative;
+
+    /* Блочная модель */
+	display: inline-block;
 	width: 18px;
+	height: 18px;
+
+    /* Оформление */
+	cursor: pointer;
+
+    /* Анимация */
     -webkit-transition: background ease-in-out 0.5s;
 	-moz-transition: background ease-in-out 0.5s;
 	-o-transition: background ease-in-out 0.5s;
@@ -105,15 +115,20 @@ body {
 }
 
 .circle {
-    display: block;
+    /* Позиционирование */
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
+    top: 0;
+
+    /* Блочная модель */
+    display: block;
     margin: auto;
-    height: 10px;
     width: 10px;
+    height: 10px;
+    
+    /* Оформление */
     background: rgb(112, 171, 255);
     -webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -122,6 +137,7 @@ body {
 }
 
 .wrapper label:hover .circle {
+    /* Оформление */
     background: #fff;
     border: 1px solid #fff;
 }
@@ -131,7 +147,8 @@ body {
 #slide3:checked ~ .controls label:nth-of-type(3) .circle,
 #slide4:checked ~ .controls label:nth-of-type(4) .circle,
 #slide5:checked ~ .controls label:nth-of-type(5) .circle {
-	background: none;
+	/* Оформление */
+    background: none;
     border: 1px solid rgb(112, 171, 255);
 }
 
@@ -140,6 +157,42 @@ body {
 #slide3:checked ~ .controls label:nth-of-type(3):hover .circle,
 #slide4:checked ~ .controls label:nth-of-type(4):hover .circle,
 #slide5:checked ~ .controls label:nth-of-type(5):hover .circle {
-	background: none;
+	/* Оформление */
+    background: none;
     border: 1px solid #fff;
+}
+
+.text-slider {
+    /* Позиционирование */
+    position: absolute;
+    left: 0;
+
+    /* Блочная модель */
+    width: 50vw;
+    margin-top: 3.3vw;
+
+    /* Типографика */
+    color: #fff;
+}
+
+.texts {
+    /* Позиционирование */
+    position: absolute;
+    z-index: 0;
+
+    /* Типографика */
+    font-size: 1.2em;
+
+    /* Оформление */
+    opacity: 0;
+
+    /* Анимация */
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+	-webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;    
 }
