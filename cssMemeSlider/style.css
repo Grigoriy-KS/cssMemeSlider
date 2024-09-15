@@ -11,3 +11,13 @@
 body {
     background-color: #000;
 }
+
+.wrapper {
+    /* Позиционирование */
+	position: relative;
+
+    /* Блочная модель */
+    width: 94vw;
+    height: 43.5vw;
+	margin: 2vw auto 0;
+}
