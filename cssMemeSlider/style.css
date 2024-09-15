@@ -43,3 +43,24 @@ body {
 	-o-border-radius: 1vw;
 	border-radius: 1vw;
 }
+
+.slides {
+    /* Позиционирование */
+	position: absolute;
+	z-index: 0;
+
+    /* Блочная модель */
+	width: inherit;
+	height: inherit;
+    
+    /* Анимация */
+    opacity: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;    
+}
