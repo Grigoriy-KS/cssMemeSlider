@@ -1,0 +1,258 @@
+* {
+    /* Блочная модель */
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.wrapper {
+    /* Позиционирование */
+	position: relative;
+
+    /* Блочная модель */
+    width: 94vw;
+    height: 43.5vw;
+	margin: 2vw auto 0;
+}
+
+.wrapper > input {
+    /* Блочная модель */
+	display: none;
+}
+
+.slider {
+    /* Позиционирование */
+	position: relative;
+
+    /* Блочная модель */
+    height: inherit;
+	width: inherit;
+    overflow: hidden;
+
+    /* Оформление */
+	background-color: #ddd;
+    -webkit-border-radius: 1vw;
+	-moz-border-radius: 1vw;
+	-o-border-radius: 1vw;
+	border-radius: 1vw;
+}
+
+.slides {
+    /* Позиционирование */
+	position: absolute;
+	z-index: 0;
+
+    /* Блочная модель */
+	width: inherit;
+	height: inherit;
+    
+    /* Анимация */
+    opacity: 0;
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;    
+}
+
+.slide1 {
+    background-image: url(./assets/img/eb4fe9d0be35de4394b9755566c9f86c.jpg);
+    background-size: cover;    
+}
+.slide2 {
+    background-image: url(./assets/img/314e15b1818ee8a6f654168f611e9cba.jpg);
+    background-size: cover;
+}
+.slide3 {
+    background-image: url(./assets/img/c55b9821089e04e5860f5354bb5d9929.jpg);
+    background-size: cover;
+}
+.slide4 {
+    background-image: url(./assets/img/65303dfe5c6932f5fe048ddde7cbc98f.jpg);
+    background-size: cover;
+}
+.slide5 {
+    background-image: url(./assets/img/0a00eef50c28de8196e15e3c58c8ded5.jpg);
+    background-size: cover;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	/* Позиционирование */
+	z-index: 1;
+
+    /* Оформление */
+    opacity: 1;
+
+    /* Анимация */
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.wrapper .controls {
+    /* Позиционирование */
+    right: 0.15vw;
+	position: absolute;
+
+    /* Блочная модель */
+    margin-top: 2.5vw;
+}
+
+.wrapper label {
+    /* Позиционирование */
+	position: relative;
+
+    /* Блочная модель */
+	display: inline-block;
+    width: 1.5em;
+	height: 3em;
+
+    /* Оформление */
+	cursor: pointer;
+
+    /* Анимация */
+    -webkit-transition: background ease-in-out 0.5s;
+	-moz-transition: background ease-in-out 0.5s;
+	-o-transition: background ease-in-out 0.5s;
+	transition: background ease-in-out 0.5s;
+}
+
+.circle {
+    /* Позиционирование */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    /* Блочная модель */
+    display: block;
+    margin: auto;
+    /* width: 10px;
+    height: 10px; */
+    width: 1em;
+    height: 1em;
+    
+    /* Оформление */
+    background: rgb(112, 171, 255);
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wrapper label:hover .circle {
+    /* Оформление */
+    background: #fff;
+    border: 0.0625em solid #fff;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1) .circle,
+#slide2:checked ~ .controls label:nth-of-type(2) .circle,
+#slide3:checked ~ .controls label:nth-of-type(3) .circle,
+#slide4:checked ~ .controls label:nth-of-type(4) .circle,
+#slide5:checked ~ .controls label:nth-of-type(5) .circle {
+	/* Оформление */
+    background: none;
+    border: 0.0625em solid rgb(112, 171, 255);
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1):hover .circle,
+#slide2:checked ~ .controls label:nth-of-type(2):hover .circle,
+#slide3:checked ~ .controls label:nth-of-type(3):hover .circle,
+#slide4:checked ~ .controls label:nth-of-type(4):hover .circle,
+#slide5:checked ~ .controls label:nth-of-type(5):hover .circle {
+	/* Оформление */
+    background: none;
+    border: 0.0625em solid #fff;
+}
+
+.text-slider {
+    /* Позиционирование */
+    position: absolute;
+    left: 0;
+
+    /* Блочная модель */
+    width: 50vw;
+    margin-top: 3.3vw;
+
+    /* Типографика */
+    color: #fff;
+}
+
+.texts {
+    /* Позиционирование */
+    position: absolute;
+    z-index: 0;
+
+    /* Блочная модель */
+    display: none;
+
+    /* Типографика */
+    font-size: 1.7em;
+
+    /* Оформление */
+    opacity: 0;
+
+    /* Анимация */
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-o-transform: scale(2);
+	transform: scale(2);
+	-webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	-o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+	transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;    
+}
+
+#slide1:checked ~ .text-slider > .text1,
+#slide2:checked ~ .text-slider > .text2,
+#slide3:checked ~ .text-slider > .text3,
+#slide4:checked ~ .text-slider > .text4,
+#slide5:checked ~ .text-slider > .text5 {
+    /* Позиционирование */
+	z-index: 1;
+
+    /* Блочная модель */
+    display: flex;
+
+    /* Оформление */
+	opacity: 1;
+
+    /* Анимация */
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+@media (max-width: 500px) {
+
+    .wrapper .controls {
+        /* Позиционирование */
+        position: relative;
+        right: 0;
+        left: 0;
+
+        /* Блочная модель */
+        display: flex;
+        justify-content: center;
+        margin-top: 4vw;
+    }
+
+}
